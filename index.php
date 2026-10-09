@@ -1,5 +1,7 @@
 <?php
-   $page=parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+   $page=strtolower(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+   $page = rtrim($page, '/');
+   $page = $page ? $page : '/';
    include __DIR__."/pages/server/conn.php";
    $company = [
     "name"     => "bluestore",
@@ -18,93 +20,97 @@
         include __DIR__."/pages/main/login.php";
         break;
     
+    case '/search':
+    case '/category':
+        include __DIR__."/pages/main/category.php";
+        break;
+    
+    case '/product':
+        include __DIR__.'/pages/main/products.php';
+        break;
+    
+    case '/cart':
+        include __DIR__.'/pages/main/cart.php';
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/':
+    case '/home':
+        break;
+    
+    case '/logout':
+         session_start();
+         session_destroy();
+         header("location:/login");
+        break;
+    
     case '/member':
+    case '/members':
     case '/dashboard':
         include __DIR__."/pages/member/index.php";
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
-        break;
-    
-    case '/':
-    case '/home':
         break;
     
     default:

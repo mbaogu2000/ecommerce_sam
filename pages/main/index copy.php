@@ -1,0 +1,1051 @@
+<?php
+ include __DIR__."/config.php";
+//  session_destroy()
+?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= $company['title'] ?></title>
+  
+  <!-- Tailwind CSS Output -->
+  <link href="./src/output.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* Custom Hero Section Gradient Background */
+    .hero-gradient {
+      background: linear-gradient(135deg, #2b1158 0%, #7b1d8e 35%, #e11d48 70%, #fb923c 100%);
+    }
+  
+    /* Optional keyframe animation for floating badge */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <?php include __dir__."/head.php"; ?>
+    <section class="relative w-full max-w-[1440px] mx-auto px-2 sm:px-4 lg:px-6 pt-4 pb-12">
+        <!-- Main Banner Container -->
+        <div class="relative rounded-3xl overflow-hidden hero-gradient shadow-2xl min-h-[580px] lg:min-h-[620px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 text-white">
+          
+          <!-- Organic Decorative Background Shapes -->
+          <div class="absolute -top-20 -left-20 w-80 h-80 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute top-1/2 right-10 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-20 right-1/3 w-80 h-80 bg-pink-500/30 rounded-full blur-3xl pointer-events-none"></div>
+    
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center h-full">
+            
+            <!-- Left Content Column -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6 max-w-xl">
+              
+              <!-- Badge -->
+              <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-xs font-semibold tracking-wider uppercase text-white shadow-inner">
+                NEW SEASON
+              </div>
+    
+              <!-- Headline -->
+              <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] tracking-tight text-white drop-shadow-sm">
+                Elevate Your <br />
+                <span class="italic font-light">Everyday Style</span>
+              </h1>
+    
+              <!-- Subtitle -->
+              <p class="text-base sm:text-lg text-white/90 font-light leading-relaxed max-w-lg">
+                Discover premium fashion curated for every mood, every moment.
+              </p>
+    
+              <!-- CTA Buttons -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <!-- Shop Now Button -->
+                <a href="#" class="px-8 py-3.5 rounded-xl font-bold text-sm text-white tracking-wide bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:from-amber-600 hover:to-purple-700 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transform hover:-translate-y-0.5 transition-all duration-200">
+                  SHOP NOW
+                </a>
+    
+                <!-- Explore Collection Button -->
+                <a href="#" class="px-8 py-3.5 rounded-xl font-semibold text-sm text-white border-2 border-white/80 bg-white/5 hover:bg-white/15 backdrop-blur-sm transition-all duration-200">
+                  EXPLORE COLLECTION
+                </a>
+              </div>
+    
+              <!-- Feature Badges -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 w-full border-t border-white/15">
+                
+                <!-- Item 1 -->
+                <div class="flex items-center space-x-3 group">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+                    <i class="bi bi-truck text-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">FREE SHIPPING</h4>
+                    <p class="text-[11px] text-white/70">On orders above ₹999</p>
+                  </div>
+                </div>
+    
+                <!-- Item 2 -->
+                <div class="flex items-center space-x-3 group">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+                    <i class="bi bi-patch-check text-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">PREMIUM QUALITY</h4>
+                    <p class="text-[11px] text-white/70">Finest materials</p>
+                  </div>
+                </div>
+    
+                <!-- Item 3 -->
+                <div class="flex items-center space-x-3 group">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+                    <i class="bi bi-arrow-counterclockwise text-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">EASY RETURNS</h4>
+                    <p class="text-[11px] text-white/70">Hassle free returns</p>
+                  </div>
+                </div>
+    
+              </div>
+    
+            </div>
+    
+            <!-- Right Model Image & Offer Circle -->
+            <div class="lg:col-span-5 relative flex justify-center items-end h-full mt-6 lg:mt-0">
+              
+              <!-- Discount Circle Badge -->
+              <div class="absolute top-4 right-2 sm:right-6 lg:-right-4 z-20 animate-float">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-500 shadow-2xl">
+                  <div class="w-full h-full rounded-full bg-gradient-to-br from-rose-500/90 to-purple-800/90 backdrop-blur-md flex flex-col items-center justify-center text-center p-2 text-white border border-white/30">
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-amber-200">UP TO</span>
+                    <span class="text-2xl sm:text-3xl font-extrabold leading-none tracking-tight">60%</span>
+                    <span class="text-[10px] font-bold tracking-wider uppercase">OFF</span>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Model Image Container with sleek clip path or backdrop layer -->
+              <div class="relative w-full max-w-md lg:max-w-none flex justify-center">
+                <!-- Background Glow behind model -->
+                <div class="absolute inset-0 bg-gradient-to-t from-rose-500/40 to-transparent rounded-b-3xl blur-2xl"></div>
+                
+                <img 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Fashion Model in Purple Suit" 
+                  class="relative z-10 max-h-[480px] sm:max-h-[520px] lg:max-h-[560px] object-cover object-top filter drop-shadow-2xl rounded-2xl lg:rounded-none"
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x800/818cf8/ffffff?text=Velora+Fashion+Model';"
+                />
+              </div>
+    
+            </div>
+    
+          </div>
+    
+          <!-- Carousel Pagination Indicator Dots -->
+          <div class="relative z-10 flex items-center justify-center space-x-2 pt-6">
+            <button class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity"></button>
+            <button class="w-8 h-2.5 rounded-full bg-white shadow-sm"></button>
+            <button class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity"></button>
+          </div>
+    
+        </div>
+    
+        <!-- Bottom Offer Grid / Promo Cards -->
+        <div class="relative z-20 -mt-8 sm:-mt-10 px-2 sm:px-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Promo Card 1 -->
+            <div class="rounded-2xl p-4 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center space-x-4 border border-white/20">
+              <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center flex-shrink-0">
+                <i class="bi bi-percent text-2xl text-white"></i>
+              </div>
+              <div>
+                <div class="text-xs font-black tracking-wider uppercase text-amber-200">UP TO</div>
+                <div class="text-lg font-extrabold tracking-tight leading-none">60% OFF</div>
+                <p class="text-[11px] text-white/80 font-medium mt-0.5">On Selected Items</p>
+              </div>
+            </div>
+    
+            <!-- Promo Card 2 -->
+            <div class="rounded-2xl p-4 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center space-x-4 border border-white/20">
+              <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center flex-shrink-0">
+                <i class="bi bi-gift text-2xl text-white"></i>
+              </div>
+              <div>
+                <div class="text-lg font-extrabold tracking-tight leading-none">BUY 2 GET 1 FREE</div>
+                <p class="text-[11px] text-white/80 font-medium mt-1">On All Products</p>
+              </div>
+            </div>
+    
+            <!-- Promo Card 3 -->
+            <div class="rounded-2xl p-4 bg-gradient-to-r from-purple-600 via-indigo-500 to-cyan-500 text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center space-x-4 border border-white/20">
+              <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center flex-shrink-0">
+                <i class="bi bi-truck text-2xl text-white"></i>
+              </div>
+              <div>
+                <div class="text-sm font-black uppercase tracking-wide">FREE SHIPPING</div>
+                <div class="text-sm font-bold text-cyan-100">Above ₹999</div>
+                <p class="text-[11px] text-white/80 font-medium">Only For Today</p>
+              </div>
+            </div>
+    
+            <!-- Promo Card 4 -->
+            <div class="rounded-2xl p-4 bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-500 text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center space-x-4 border border-white/20">
+              <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center flex-shrink-0">
+                <i class="bi bi-credit-card text-2xl text-white"></i>
+              </div>
+              <div>
+                <div class="text-lg font-extrabold tracking-tight leading-none">EXTRA 10% OFF</div>
+                <p class="text-[11px] text-white/80 font-medium mt-1">On Prepaid Orders</p>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+      </section>
+
+      <!-- SHOP BY CATEGORY SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Section Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 uppercase">
+        Shop By Category
+      </h2>
+      <a href="/Category" class="text-xs sm:text-sm font-semibold text-gray-700 hover:text-pink-600 flex items-center gap-1 uppercase tracking-wider transition-colors">
+        View All <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  
+    <!-- Categories Grid -->
+
+    <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-7 gap-4 sm:gap-6 text-center">
+    <?php 
+// Query the database to fetch the first 7 categories
+$categories = $conn->query("SELECT slug, name, image FROM category LIMIT 7");
+
+// Loop through each category row and dynamically generate the HTML
+if ($categories && $categories->num_rows > 0):
+    while ($category = $categories->fetch_assoc()): 
+        // Fallback image if none is provided in the database
+        $image = !empty($category['image']) ? $category['image'] : 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=300&q=80';
+?>
+        <a href="category.php?slug=<?php echo htmlspecialchars($category['slug']); ?>" class="group flex flex-col items-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full p-1 bg-gradient-to-tr from-purple-200 via-pink-200 to-indigo-100 group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-300 shadow-sm">
+                <div class="w-full h-full rounded-full overflow-hidden bg-gray-100">
+                    <img src="<?php echo htmlspecialchars($image); ?>" 
+                         alt="<?php echo htmlspecialchars($category['name']); ?>" 
+                         class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300">
+                </div>
+            </div>
+            <span class="mt-2.5 text-xs font-bold text-gray-800 tracking-wider uppercase group-hover:text-pink-600 transition-colors">
+                <?php echo htmlspecialchars($category['name']); ?>
+            </span>
+        </a>
+<?php 
+    endwhile; 
+endif; 
+?>
+    </div>
+  </section>
+  
+  <!-- TRENDING NOW SECTION -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative">
+    <!-- Section Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 uppercase">
+        Trending Now
+      </h2>
+      <a href="#" class="text-xs sm:text-sm font-semibold text-gray-700 hover:text-pink-600 flex items-center gap-1 uppercase tracking-wider transition-colors">
+        View All <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  
+    <!-- Scroll Container & Next Navigation Button -->
+    <div class="relative">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
+        
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-pink-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -30%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=400&q=80" alt="Floral Maxi Dress" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Floral Maxi Dress</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹1,499</span>
+                <span class="text-[10px] text-gray-400 line-through">₹2,499</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(230)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-purple-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -20%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=400&q=80" alt="Linen Oversized Shirt" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Linen Oversized Shirt</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹899</span>
+                <span class="text-[10px] text-gray-400 line-through">₹1,499</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(180)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-rose-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -20%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80" alt="Cotton Co-ord Set" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Cotton Co-ord Set</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹1,799</span>
+                <span class="text-[10px] text-gray-400 line-through">₹2,299</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(170)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 4 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-orange-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -30%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=400&q=80" alt="Ruffle Sleeve Top" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Ruffle Sleeve Top</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹699</span>
+                <span class="text-[10px] text-gray-400 line-through">₹1,299</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(345)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 5 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-blue-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -35%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=400&q=80" alt="High Waist Jeans" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">High Waist Jeans</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹1,299</span>
+                <span class="text-[10px] text-gray-400 line-through">₹1,999</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(220)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 6 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-pink-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -30%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=400&q=80" alt="Wrap Midi Dress" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Wrap Midi Dress</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹1,499</span>
+                <span class="text-[10px] text-gray-400 line-through">₹2,200</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(154)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 7 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-gray-50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -25%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Knitted Tank Top" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Knitted Tank Top</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹749</span>
+                <span class="text-[10px] text-gray-400 line-through">₹999</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(98)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+        <!-- Product Card 8 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between p-2">
+          <div class="relative rounded-lg overflow-hidden bg-rose-50/50 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+              -30%
+            </span>
+            <button class="absolute top-2 right-2 z-10 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-pink-600 transition-colors">
+              <i class="bi bi-heart text-xs"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=400&q=80" alt="Palazzo Pants" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Palazzo Pants</h3>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-xs font-bold text-gray-900">₹699</span>
+                <span class="text-[10px] text-gray-400 line-through">₹1,299</span>
+              </div>
+              <div class="flex items-center gap-1 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(102)</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 py-1.5 border border-pink-500 text-pink-600 hover:bg-pink-600 hover:text-white rounded-md text-[10px] font-bold uppercase transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Right Chevron Button -->
+      <button class="absolute -right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-white rounded-full shadow-lg border border-gray-100 hidden sm:flex items-center justify-center text-gray-700 hover:text-pink-600 hover:scale-105 transition-all z-10">
+        <i class="bi bi-chevron-right text-sm"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- COLLECTION BANNERS SECTION -->
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Banner 1: Summer Collection -->
+      <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-700 to-pink-500 p-6 flex items-center justify-between min-h-[180px] shadow-md hover:shadow-lg transition-shadow">
+        <div class="z-10 max-w-[60%] flex flex-col items-start justify-between h-full">
+          <div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white leading-tight uppercase tracking-wide">
+              Summer<br />Collection
+            </h3>
+            <p class="text-xs text-white/80 font-medium mt-1">Light, Breezy & Beautiful</p>
+          </div>
+          <a href="#" class="mt-4 inline-block px-4 py-2 bg-white text-gray-900 hover:bg-gray-100 rounded-lg text-[11px] font-bold tracking-wider uppercase transition-colors shadow-sm">
+            Shop Now
+          </a>
+        </div>
+        <div class="absolute right-0 bottom-0 top-0 w-1/2 overflow-hidden flex items-end justify-end">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80" alt="Summer Collection Model" class="h-full w-full object-cover object-top">
+        </div>
+      </div>
+  
+      <!-- Banner 2: New Arrivals -->
+      <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 p-6 flex items-center justify-between min-h-[180px] shadow-md hover:shadow-lg transition-shadow">
+        <div class="z-10 max-w-[60%] flex flex-col items-start justify-between h-full">
+          <div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white leading-tight uppercase tracking-wide">
+              New Arrivals
+            </h3>
+            <p class="text-xs text-white/80 font-medium mt-1">Fresh Styles Just For You</p>
+          </div>
+          <a href="#" class="mt-4 inline-block px-4 py-2 bg-white text-gray-900 hover:bg-gray-100 rounded-lg text-[11px] font-bold tracking-wider uppercase transition-colors shadow-sm">
+            Shop Now
+          </a>
+        </div>
+        <div class="absolute right-0 bottom-0 top-0 w-1/2 overflow-hidden flex items-end justify-end">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="New Arrivals Model" class="h-full w-full object-cover object-top">
+        </div>
+      </div>
+  
+      <!-- Banner 3: Party Wear -->
+      <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-purple-900 via-purple-700 to-pink-600 p-6 flex items-center justify-between min-h-[180px] shadow-md hover:shadow-lg transition-shadow">
+        <div class="z-10 max-w-[60%] flex flex-col items-start justify-between h-full">
+          <div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white leading-tight uppercase tracking-wide">
+              Party Wear
+            </h3>
+            <p class="text-xs text-white/80 font-medium mt-1">Shine In Every Occasion</p>
+          </div>
+          <a href="#" class="mt-4 inline-block px-4 py-2 bg-white text-gray-900 hover:bg-gray-100 rounded-lg text-[11px] font-bold tracking-wider uppercase transition-colors shadow-sm">
+            Shop Now
+          </a>
+        </div>
+        <div class="absolute right-0 bottom-0 top-0 w-1/2 overflow-hidden flex items-end justify-end">
+          <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=400&q=80" alt="Party Wear Model" class="h-full w-full object-cover object-top">
+        </div>
+      </div>
+  
+    </div>
+</section>
+  
+  <!-- NEW ARRIVALS CAROUSEL SECTION -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
+    <!-- Section Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 uppercase">
+        New Arrivals
+      </h2>
+      <a href="#" class="text-xs sm:text-sm font-semibold text-gray-700 hover:text-pink-600 flex items-center gap-1 uppercase tracking-wider transition-colors">
+        View All <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  
+    <!-- Carousel Container with Arrows -->
+    <div class="relative">
+      <!-- Left Arrow Button -->
+      <button class="absolute -left-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-white rounded-full shadow-lg border border-gray-100 hidden sm:flex items-center justify-center text-gray-700 hover:text-pink-600 hover:scale-105 transition-all z-20">
+        <i class="bi bi-chevron-left text-sm"></i>
+      </button>
+  
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
+        
+        <!-- Product 1 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-rose-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-orange-500 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=300&q=80" alt="Embroidered Kurta Set" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-medium text-gray-700 truncate">Embroidered Kurta Set</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,799</p>
+          </div>
+        </div>
+  
+        <!-- Product 2 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-purple-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-purple-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=300&q=80" alt="Satin Slip Dress" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-medium text-gray-700 truncate">Satin Slip Dress</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,299</p>
+          </div>
+        </div>
+  
+        <!-- Product 3 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-pink-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-purple-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=300&q=80" alt="Printed Kaftan" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-medium text-gray-700 truncate">Printed Kaftan</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,399</p>
+          </div>
+        </div>
+  
+        <!-- Product 4 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-amber-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-purple-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=300&q=80" alt="Pleated Skirt" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-medium text-gray-700 truncate">Pleated Skirt</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,199</p>
+          </div>
+        </div>
+  
+        <!-- Product 5 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-orange-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-orange-500 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=300&q=80" alt="Lace Top" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-medium text-gray-700 truncate">Lace Top</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,099</p>
+          </div>
+        </div>
+  
+        <!-- Product 6 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-rose-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-orange-500 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80" alt="White Co-ord Set" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-semibold text-gray-700 truncate">White Co-ord Set</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,799</p>
+          </div>
+        </div>
+  
+        <!-- Product 7 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-cyan-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-teal-500 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=300&q=80" alt="Denim Jacket" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-semibold text-gray-700 truncate">Denim Jacket</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,399</p>
+          </div>
+        </div>
+  
+        <!-- Product 8 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-2 flex flex-col justify-between">
+          <div class="relative rounded-lg overflow-hidden bg-purple-50/40 aspect-[3/4]">
+            <span class="absolute top-2 left-2 z-10 bg-blue-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded uppercase">
+              NEW
+            </span>
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=300&q=80" alt="Blazer Co-ord Set" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="mt-2 text-center">
+            <h3 class="text-[11px] font-semibold text-gray-700 truncate">Blazer Co-ord Set</h3>
+            <p class="text-xs font-bold text-gray-900 mt-0.5">₹2,199</p>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Right Arrow Button -->
+      <button class="absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-white rounded-full shadow-lg border border-gray-100 hidden sm:flex items-center justify-center text-gray-700 hover:text-pink-600 hover:scale-105 transition-all z-20">
+        <i class="bi bi-chevron-right text-sm"></i>
+      </button>
+    </div>
+  </section>
+  <!-- BOTTOM FEATURE / GUARANTEE BAR SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[#1e143b] text-white rounded-2xl py-6 px-6 sm:px-10 shadow-xl border border-white/10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-center">
+        
+        <!-- Feature 1: Premium Quality -->
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-full border-2 border-pink-500/60 bg-pink-500/10 flex items-center justify-center flex-shrink-0 text-pink-400">
+            <i class="bi bi-shield-check text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Premium Quality</h4>
+            <p class="text-[11px] text-gray-300 mt-0.5">Finest fabrics & trusted quality</p>
+          </div>
+        </div>
+  
+        <!-- Feature 2: Easy Returns -->
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-full border-2 border-purple-500/60 bg-purple-500/10 flex items-center justify-center flex-shrink-0 text-purple-400">
+            <i class="bi bi-arrow-repeat text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Easy Returns</h4>
+            <p class="text-[11px] text-gray-300 mt-0.5">7 days return & exchange</p>
+          </div>
+        </div>
+  
+        <!-- Feature 3: Secure Payment -->
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-full border-2 border-pink-500/60 bg-pink-500/10 flex items-center justify-center flex-shrink-0 text-pink-400">
+            <i class="bi bi-lock text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Secure Payment</h4>
+            <p class="text-[11px] text-gray-300 mt-0.5">100% safe & secure</p>
+          </div>
+        </div>
+  
+        <!-- Feature 4: Fast Delivery -->
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-full border-2 border-purple-500/60 bg-purple-500/10 flex items-center justify-center flex-shrink-0 text-purple-400">
+            <i class="bi bi-truck text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Fast Delivery</h4>
+            <p class="text-[11px] text-gray-300 mt-0.5">Quick delivery at your doorstep</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- BEST SELLERS & CUSTOMER REVIEWS SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+      
+      <!-- Left Column: Best Sellers Products (7 cols) -->
+      <div class="lg:col-span-6 flex flex-col justify-between">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold tracking-tight text-gray-900 uppercase">
+            Best Sellers
+          </h2>
+          <a href="#" class="text-xs font-semibold text-gray-700 hover:text-pink-600 flex items-center gap-1 uppercase tracking-wider transition-colors">
+            View All <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+  
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          
+          <!-- Product 1 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm p-2 flex flex-col justify-between">
+            <div class="relative rounded-lg overflow-hidden bg-rose-50/50 aspect-[3/4]">
+              <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded">
+                -25%
+              </span>
+              <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=300&q=80" alt="Floral Dress" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Floral Dress</h3>
+              <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,299</p>
+              <div class="flex items-center justify-center gap-0.5 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(98)</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Product 2 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm p-2 flex flex-col justify-between">
+            <div class="relative rounded-lg overflow-hidden bg-purple-50/50 aspect-[3/4]">
+              <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded">
+                -30%
+              </span>
+              <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=300&q=80" alt="Denim Jacket" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Denim Jacket</h3>
+              <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,299</p>
+              <div class="flex items-center justify-center gap-0.5 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(75)</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Product 3 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm p-2 flex flex-col justify-between">
+            <div class="relative rounded-lg overflow-hidden bg-pink-50/50 aspect-[3/4]">
+              <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded">
+                -20%
+              </span>
+              <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=300&q=80" alt="A-Line Midi Dress" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">A-Line Midi Dress</h3>
+              <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,499</p>
+              <div class="flex items-center justify-center gap-0.5 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(110)</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Product 4 -->
+          <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm p-2 flex flex-col justify-between">
+            <div class="relative rounded-lg overflow-hidden bg-orange-50/50 aspect-[3/4]">
+              <span class="absolute top-2 left-2 z-10 bg-pink-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded">
+                -30%
+              </span>
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80" alt="Co-ord Set" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="text-[11px] font-semibold text-gray-700 truncate">Co-ord Set</h3>
+              <p class="text-xs font-bold text-gray-900 mt-0.5">₹1,699</p>
+              <div class="flex items-center justify-center gap-0.5 text-[10px] text-amber-400 mt-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-gray-400 ml-0.5">(65)</span>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- Right Column: Customer Reviews Cards (5 cols) -->
+      <div class="lg:col-span-6 flex flex-col justify-between">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold tracking-tight text-gray-900 uppercase">
+            What Our Customers Say
+          </h2>
+        </div>
+  
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 h-full items-stretch">
+          
+          <!-- Review 1 -->
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between text-center">
+            <div>
+              <div class="flex justify-center text-amber-400 text-xs gap-0.5 mb-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-xs text-gray-600 italic leading-snug">
+                "Amazing quality and fits perfectly. Loved the collection!"
+              </p>
+            </div>
+            <div class="flex items-center justify-center gap-2 mt-4 pt-2 border-t border-gray-50">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Priya S." class="w-8 h-8 rounded-full object-cover">
+              <span class="text-xs font-bold text-gray-800">— Priya S.</span>
+            </div>
+          </div>
+  
+          <!-- Review 2 -->
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between text-center">
+            <div>
+              <div class="flex justify-center text-amber-400 text-xs gap-0.5 mb-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-xs text-gray-600 italic leading-snug">
+                "Super fast delivery and beautiful packaging. Highly recommended!"
+              </p>
+            </div>
+            <div class="flex items-center justify-center gap-2 mt-4 pt-2 border-t border-gray-50">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Neha K." class="w-8 h-8 rounded-full object-cover">
+              <span class="text-xs font-bold text-gray-800">— Neha K.</span>
+            </div>
+          </div>
+  
+          <!-- Review 3 -->
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between text-center">
+            <div>
+              <div class="flex justify-center text-amber-400 text-xs gap-0.5 mb-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-xs text-gray-600 italic leading-snug">
+                "Trendy styles at best prices. My go-to fashion store!"
+              </p>
+            </div>
+            <div class="flex items-center justify-center gap-2 mt-4 pt-2 border-t border-gray-50">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=100&q=80" alt="Anjali R." class="w-8 h-8 rounded-full object-cover">
+              <span class="text-xs font-bold text-gray-800">— Anjali R.</span>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- INSTAGRAM FEED SECTION -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-lg sm:text-xl font-bold tracking-tight text-gray-900 uppercase flex items-center gap-2">
+        Follow Us On Instagram <span class="text-xs font-medium text-pink-600 normal-case">@velora.fashion</span>
+      </h2>
+    </div>
+  
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+      <!-- Insta Post 1 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Insta Post 2 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Insta Post 3 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Insta Post 4 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Insta Post 5 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Insta Post 6 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Insta Post 7 -->
+      <a href="#" class="group relative rounded-lg overflow-hidden aspect-square bg-gray-100">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=300&q=80" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-pink-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+          <i class="bi bi-instagram text-lg"></i>
+        </div>
+      </a>
+  
+      <!-- Tag Us Promo Card (8th item) -->
+      <div class="rounded-lg overflow-hidden bg-gradient-to-tr from-purple-800 via-pink-600 to-orange-400 p-3 text-white flex flex-col justify-center items-center text-center">
+        <h4 class="text-xs font-black uppercase leading-tight">Tag Us To Get Featured</h4>
+        <p class="text-[10px] font-semibold mt-1 opacity-90">#VeloraFashion</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- NEWSLETTER SUBSCRIBE BANNER SECTION -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-600 to-pink-500 p-6 sm:p-8 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
+      
+      <!-- Text Content -->
+      <div class="max-w-xl text-center lg:text-left">
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight uppercase">
+          Get 10% Off On Your First Order
+        </h3>
+        <p class="text-xs sm:text-sm text-white/80 mt-1">
+          Subscribe to our newsletter & get exclusive offers, new arrivals and style updates.
+        </p>
+      </div>
+  
+      <!-- Form Input & Gift Box Graphic -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+        <div class="relative flex items-center w-full sm:w-96 bg-white rounded-xl overflow-hidden p-1 shadow-inner">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            class="w-full py-2.5 px-4 text-xs text-gray-800 focus:outline-none placeholder:text-gray-400"
+          />
+          <button class="bg-[#0f1026] hover:bg-black text-white px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors flex-shrink-0">
+            Subscribe
+          </button>
+        </div>
+  
+        <!-- Gift Box Icon / Graphic Container -->
+        <div class="hidden sm:flex items-center justify-center w-16 h-16 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex-shrink-0">
+          <i class="bi bi-gift-fill text-3xl text-pink-200"></i>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- BRAND LOGOS MARQUEE / FOOTER BAR -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-t border-gray-100">
+    <div class="flex flex-wrap justify-between items-center gap-6 opacity-70 grayscale hover:grayscale-0 transition-all">
+      <span class="font-extrabold tracking-tighter text-lg text-gray-800">ZARA</span>
+      <span class="font-black text-xl text-gray-800">H&M</span>
+      <span class="font-bold tracking-widest text-base text-gray-800">MANGO</span>
+      <span class="font-bold tracking-wider text-base text-gray-800">ONLY</span>
+      <span class="font-semibold tracking-wider text-sm text-gray-800">VERO MODA</span>
+      <span class="font-bold tracking-tighter text-base text-gray-800">FOREVER 21</span>
+      <span class="font-extrabold italic text-lg text-gray-800">NIKE</span>
+      <span class="font-black tracking-widest text-lg text-gray-800">LEVI'S</span>
+    </div>
+  </section>
+  <!-- FOOTER SECTION -->
+<?php include __DIR__."/footer.php";  ?>
+</body>
+</html>

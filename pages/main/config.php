@@ -108,3 +108,4 @@ if ($unlinked_result && $unlinked_result->num_rows > 0) {
         $unlinked_brands[] = $brand;
     }
 }
+
